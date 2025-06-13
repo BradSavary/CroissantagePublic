@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer base {
+
+:root {
+  --clr-red: #377E9A;
+  --clr-white: #FDFDFD;
+  --clr-black: #010101;
+}
+
+}
+
+@layer utilities {
+  .bg-custom {
+    background-color: var(--clr-red);
+  }
+  .text-custom {
+    color: var(--clr-white);
+  }
+
+  .bg-custom-reverse {
+    background-color: var(--clr-white);
+  }
+
+  .text-custom-reverse {
+    color: var(--clr-red);
+  }
+
+  .bg-gradient-custom {
+    background-image: linear-gradient(to bottom, var(--clr-red), var(--clr-light-red));
+  }
+
+  .text-custom-black{
+    color: var(--clr-black);
+  }
+
+  .border-custom {
+    border-color: var(--clr-red);
+  }
+}
