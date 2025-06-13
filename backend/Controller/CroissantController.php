@@ -11,48 +11,6 @@ class CroissantController extends Controller{
         $this->croissants = new CroissantRepositery();
     }
 
-    // private function sendEmailNotification($croissanteur, $imprudent, $date) {
-    //     ini_set("SMTP", "smtp1.sil.fr");
-    //     ini_set("smtp_port", "25");
-
-    //     $to = "informatique@chimb.fr";
-    //     $subject = "Nouveau croissantage ajouté";
-    //     $message = "
-    //         <html>
-    //         <head>
-    //         <style>body {font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 0;} .email-container {max-width: 600px; margin: 20px auto; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);} .email-header {background: #377E9A; color: #fff; padding: 15px; text-align: center;} .email-body {padding: 15px;} .email-footer {background: #f1f1f1; text-align: center; padding: 10px; font-size: 12px; color: #777;}</style>
-    //         <title>Nouveau croissantage</title>
-    //         </head>
-    //         <body>
-    //         <div class='email-container'>
-    //             <div class='email-header'>
-    //             <h1>Nouveau Croissantage !</h1>
-    //             </div>
-    //             <div class='email-body'>
-    //             <p><strong>Croissanteur :</strong> $croissanteur</p>
-    //             <p><strong>Imprudent :</strong> $imprudent</p>
-    //             <p><strong>Date :</strong> $date</p>
-    //             </div>
-    //             <div class='email-footer'>
-    //             <p>Merci de faire partie de notre communauté de croissantage !</p>
-    //             </div>
-    //         </div>
-    //         </body>
-    //         </html>
-    //     ";
-    //     $headers = "MIME-Version: 1.0" . "\r\n";
-    //     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    //     $headers .= "From: informatique@chimb.fr" . "\r\n";
-    
-    //     // Envoyer l'email
-    //     if (mail($to, $subject, $message, $headers)) {
-    //         error_log("Email envoyé avec succès à $to pour le croissanteur $croissanteur.");
-    //     } else {
-    //         error_log("Erreur lors de l'envoi de l'email à $to");
-    //     }
-    // }
-
-
     private function sendEmailNotification($croissanteur, $imprudent, $date) {
         $to = "informatique@chimb.fr";
         $subject = "Nouveau croissantage : $croissanteur";
