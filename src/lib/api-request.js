@@ -1,5 +1,5 @@
 // URL de base de l'API
-const API_BASE_URL = 'http://10.84.15.15:86/api';
+const API_BASE_URL = 'http://lien/api';
 
 export async function postRequest(endpoint, data) {
   try {
